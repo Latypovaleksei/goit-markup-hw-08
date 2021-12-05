@@ -1,0 +1,21 @@
+$property: (
+  'fill': fill,
+  'color': color,
+  'background-color': background-color,
+  'border-color': border-color,
+  'border': border,
+  'box-shadow': box-shadow,
+  'transform': transform,
+);
+
+@mixin transition($property) {
+  transition-property: $property;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transitionModal {
+  transition-property: opacity, visibility;
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}

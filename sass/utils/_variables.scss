@@ -1,0 +1,39 @@
+$colors: (
+  'main': rgba(255, 255, 255, 1),
+  'secondary': rgba(47, 48, 58, 1),
+  'main-text': rgba(33, 33, 33, 1),
+  'highlighting': rgba(33, 150, 243, 1),
+  'secondary-text': rgba(117, 117, 117, 1),
+  'bt-hover': rgba(24, 140, 232, 1),
+  'backdrop': rgba(0, 0, 0, 0.2),
+  'cross': rgba(0, 0, 0, 1),
+  'textarea-text': rgba(117, 117, 117, 0.5),
+  'link-conditions': rgb(33, 150, 243),
+  'third-background': rgba(245, 244, 250, 1),
+  'bg-label': rgba(47, 48, 58, 0.8),
+  'icon': rgba(175, 177, 184, 1),
+  'footer-social-link-bg': rgba(255, 255, 255, 0.1),
+  'bg-overlay': rgba(33, 150, 243, 0.9),
+  'third-text': rgba(255, 255, 255, 0.6),
+  'bg-input': rgba(33, 150, 243, 0),
+  'secondary-bg': rgba(47, 48, 58, 1),
+);
+
+$border: (
+  'header': 1px solid rgba(236, 236, 236, 1),
+  'modalBtClose': rgba(0, 0, 0, 0.1),
+  'works': 1px solid #eeeeee,
+);
+
+$shadow: (
+  'BtHero': 0px 4px 4px rgba(0, 0, 0, 0.15),
+  'modal': 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+  'fotocard': 0px 1px 3px rgba(0, 0, 0, 0.12),
+  'bt-filter': 0px 3px 1px rgba(0, 0, 0, 0.1),
+  'works-link': 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+  'form': 0px 4px 4px 0px rgba(0, 0, 0, 0.15),
+);
+
+$gap: (
+  'works-item': 30px,
+);
