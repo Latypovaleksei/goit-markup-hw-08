@@ -1,0 +1,39 @@
+@import '../utils/variables';
+
+.hero-section {
+  display: block;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: getColor('secondary');
+  // background-image: linear-gradient(
+  //     to right,
+  //     rgba(47, 48, 58, 0.4),
+  //     rgba(47, 48, 58, 0.4)
+  //   ),
+  //     url('../images/hero_img.jpg');
+  //   background-repeat: no-repeat;
+  //   background-position: center
+  //   ;
+
+  &__title {
+    color: getColor('main');
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+  }
+
+  &__bt {
+    width: 200px;
+    height: 50px;
+  }
+}

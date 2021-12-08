@@ -19,3 +19,9 @@ $property: (
   transition-duration: 1000ms;
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
+
+@mixin transitionMobileMenu {
+  transition-property: opacity, visibility;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}

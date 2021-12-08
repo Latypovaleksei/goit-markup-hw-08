@@ -1,0 +1,28 @@
+@import '../utils/variables';
+
+.mobile-menu-sl {
+  display: flex;
+
+  &__item {
+    padding: 0px 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &:not(:last-child) {
+      border-right: getBorder('mobileMenu');
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: getColor('highlighting');
+  }
+}

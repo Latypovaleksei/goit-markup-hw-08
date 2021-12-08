@@ -1,0 +1,86 @@
+@import '../utils/variables';
+@import '../utils/transition';
+
+.contact-list {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: start;
+
+  margin-top: auto;
+  margin-bottom: 64px;
+
+  &__icon {
+    display: none;
+  }
+
+  &__link {
+    color: getColor('secondary-text');
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    &--tel {
+      color: getColor('highlighting');
+      font-size: 24px;
+      line-height: 1.18;
+    }
+
+    @include transition(colors);
+
+    &:hover,
+    &:focus,
+    &:hover .contact-list__icon,
+    &:focus .contact-list__icon {
+      color: map-get($colors, 'highlighting');
+      fill: map-get($colors, 'highlighting');
+    }
+  }
+
+  //desktop!!!
+  //.contact-list {
+  // display: flex;
+  // flex-direction: row;
+  // align-items: center;
+  // margin-left: auto;
+
+  // &__item:not(:last-child) {
+  //   margin-right: 50px;
+  // }
+
+  // &__link {
+  //   font-weight: 500;
+  //   font-size: 14px;
+  //   line-height: 1.14;
+  //   letter-spacing: 0.02em;
+
+  //   @include transition(colors);
+
+  //   &:hover,
+  //   &:focus,
+  //   &:hover .contact-list__icon,
+  //   &:focus .contact-list__icon {
+  //     color: map-get($colors, 'highlighting');
+  //     fill: map-get($colors, 'highlighting');
+  //   }
+  // }
+
+  // &__icon {
+  //   fill: map-get($colors, 'secondary-text');
+
+  //   &--envelope {
+  //     width: 16px;
+  //     height: 12px;
+  //   }
+
+  //   &--smartphone {
+  //     width: 10px;
+  //     height: 16px;
+  //   }
+
+  //   &--smartphone,
+  //   &--envelope {
+  //     margin-right: 10px;
+  //   }
+  // }
+}

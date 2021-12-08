@@ -1,0 +1,57 @@
+@import '../utils/variables';
+@import '../utils/transition';
+
+.page-header {
+  border-bottom: map-get($border, 'header');
+  position: relative;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__mobile-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    background-color: getColor('main');
+    padding: 48px 40px;
+
+    transform: translateX(100%);
+
+    @include transitionMobileMenu;
+  }
+
+  &__mobile-menu.is-open {
+    transform: translateX(0);
+  }
+
+  &__bt {
+    background-color: getColor('main');
+    border: none;
+
+    &--close {
+      @extend .page-header__bt;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+
+    .page-header__bt:hover &,
+    .page-header__bt:focus & {
+      fill: getColor('highlighting');
+    }
+  }
+}

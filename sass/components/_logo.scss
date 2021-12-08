@@ -1,0 +1,26 @@
+@import '../utils/variables';
+
+.logo {
+  font-family: getFonts('secondary');
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: getColor('main-text');
+
+  // !!!Desktop!!!
+  // margin-right: 93px;
+  // padding-top: 24px;
+  // padding-bottom: 25px;
+
+  &__web {
+    color: getColor('highlighting');
+  }
+
+  &--footer {
+    color: getColor('main');
+
+    // margin: 0px 0px 30px 0px;
+    // padding: 0;
+  }
+}

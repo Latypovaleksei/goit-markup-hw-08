@@ -23,6 +23,7 @@
 
   <body>
     <!-- Секция Верхняя линия -->
+
     <header class="page-header">
       <div class="contаiner--header contаiner">
         <!-- Блок Логотип -->
@@ -30,61 +31,111 @@
           <span class="logo__web">Web</span>
           Studio
         </a>
-        <!-- Блок Навигация -->
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="page-header__link nav__link" href="./index.html"
-                >Студия</a
-              >
-            </li>
-            <li class="nav__item nav__item--current-page">
+        <!-- Кнопка открытия меню (только в MOBILE) -->
+        <button
+          type="button"
+          class="page-header__bt js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="page-header__icon">
+            <use href="./images/icons.svg#icon-open-menu"></use>
+          </svg>
+        </button>
+
+        <!-- Блок открывающегося меню (только в MOBILE) -->
+        <div
+          class="page-header__mobile-menu js-menu-container"
+          id="mobile-menu"
+        >
+          <!-- Кнопка закрывающая меню (только MOBILE) -->
+          <button
+            type="button"
+            class="page-header__bt--close page-header__bt--close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="page-header__icon">
+              <use href="./images/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+          <!-- Блок Навигация -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="page-header__link nav__link" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="nav__item nav__item--current-page">
+                <a
+                  class="page-header__link nav__link nav__link--current-page"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="page-header__link nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Блок Контакты -->
+          <ul class="contact-list">
+            <li class="contact-list__item">
               <a
-                class="page-header__link nav__link nav__link--current-page"
-                href="./portfolio.html"
-                >Портфолио</a
+                class="
+                  page-header__link
+                  contact-list__link contact-list__link--mail
+                "
+                href="mailto:info@devstudio.com"
               >
+                <svg
+                  class="
+                    icon--animation
+                    contact-list__icon contact-list__icon--envelope
+                  "
+                >
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
-            <li class="nav__item">
-              <a class="page-header__link nav__link" href="#">Контакты</a>
+            <li class="contact-list__item">
+              <a
+                class="
+                  page-header__link
+                  contact-list__link contact-list__link--tel
+                "
+                href="tel:+380961111111"
+              >
+                <svg
+                  class="
+                    icon--animation
+                    contact-list__icon contact-list__icon--smartphone
+                  "
+                >
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
           </ul>
-        </nav>
-        <!-- Блок Контакты -->
-        <ul class="contact-list">
-          <li class="contact-list__item">
-            <a
-              class="page-header__link contact-list__link"
-              href="mailto:info@devstudio.com"
-            >
-              <svg
-                class="
-                  icon--animation
-                  contact-list__icon contact-list__icon--envelope
-                "
-              >
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact-list__item">
-            <a
-              class="page-header__link contact-list__link"
-              href="tel:+380961111111"
-            >
-              <svg
-                class="
-                  icon--animation
-                  contact-list__icon contact-list__icon--smartphone
-                "
-              >
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <!-- Блок Social-list (только MOBILE) -->
+          <ul class="mobile-menu-sl">
+            <li class="mobile-menu-sl__item">
+              <a class="mobile-menu-sl__link" href="#">Instagram</a>
+            </li>
+            <li class="mobile-menu-sl__item">
+              <a class="mobile-menu-sl__link" href="#">Twitter</a>
+            </li>
+            <li class="mobile-menu-sl__item">
+              <a class="mobile-menu-sl__link" href="#">Facebook</a>
+            </li>
+            <li class="mobile-menu-sl__item">
+              <a class="mobile-menu-sl__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -416,5 +467,13 @@
         </div>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

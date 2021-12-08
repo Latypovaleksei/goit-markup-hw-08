@@ -1,7 +1,7 @@
 @import '../utils/variables';
 
 body {
-  background-color: map-get($colors, 'main');
-  font-family: 'Roboto', sans-serif;
+  background-color: getColor('main');
+  font-family: getFonts('basic');
   font-style: normal;
 }

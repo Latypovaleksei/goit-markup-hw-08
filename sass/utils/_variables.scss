@@ -19,11 +19,22 @@ $colors: (
   'secondary-bg': rgba(47, 48, 58, 1),
 );
 
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
 $border: (
   'header': 1px solid rgba(236, 236, 236, 1),
   'modalBtClose': rgba(0, 0, 0, 0.1),
   'works': 1px solid #eeeeee,
+  'mobileMenu': 1px solid rgba(33, 33, 33, 0.2),
+  'modal': 1px solid rgba(33, 33, 33, 0.2),
+  'checkbox': 1px solid rgba(33, 33, 33, 1),
 );
+
+@function getBorder($key) {
+  @return map-get($border, $key);
+}
 
 $shadow: (
   'BtHero': 0px 4px 4px rgba(0, 0, 0, 0.15),
@@ -34,6 +45,29 @@ $shadow: (
   'form': 0px 4px 4px 0px rgba(0, 0, 0, 0.15),
 );
 
+@function getShadow($key) {
+  @return map-get($shadow, $key);
+}
+
 $gap: (
   'works-item': 30px,
 );
+
+@function getGap($key) {
+  @return map-get($gap, $key);
+}
+
+$fonts: (
+  'basic': (
+    Roboto,
+    sans-serif,
+  ),
+  'secondary': (
+    Raleway,
+    sans-serif,
+  ),
+);
+
+@function getFonts($key) {
+  @return map-get($fonts, $key);
+} ;
