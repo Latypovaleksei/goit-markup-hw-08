@@ -24,7 +24,7 @@
     background-color: getColor('main');
     padding: 48px 40px;
 
-    transform: translateX(100%);
+    transform: translateX(-100%);
 
     @include transitionMobileMenu;
   }
