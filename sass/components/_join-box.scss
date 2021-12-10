@@ -1,0 +1,29 @@
+@import '../utils/variables';
+
+.join-box {
+  // MOBILE!!!
+  margin-bottom: 60px;
+  // !!!
+
+  &__text {
+    // DESKTOP+MOBILE!!!
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: getColor('main');
+
+    margin-bottom: 20px;
+    //
+
+    // MOBILE!!!
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.14;
+    // !!!
+
+    // DESKTOP!!!
+    // font-size: 16px;
+    // line-height: 1;
+    // !!!
+  }
+}

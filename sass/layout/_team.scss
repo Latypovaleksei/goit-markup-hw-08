@@ -1,0 +1,75 @@
+@import '../utils/variables';
+
+.team {
+  background-color: getColor('third-background');
+
+  &__item {
+    // Общее с DESKTOP!!!
+    text-align: center;
+    background-color: getColor('main');
+    box-shadow: getShadow('fotocard');
+    border-radius: 0px 0px 4px 4px;
+    // !!!
+
+    // Только на DESKTOP!!!
+    // &:not(:last-child) {
+    //   margin-right: 30px;
+    // }
+    // !!!
+
+    // Только на MOBILE!!!
+    width: 450px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    // !!!
+  }
+
+  &__box {
+    // Общее с DESKTOP!!!
+    padding-top: 30px;
+    // !!!
+
+    // Только на MOBILE!!!
+    padding-bottom: 24px;
+    // !!!
+
+    // Только на DESKTOP!!!
+    //   padding-bottom: 30px;
+    // !!!
+  }
+
+  &__names {
+    // Общее с DESKTOP!!!
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 10px;
+    // !!!
+  }
+
+  &__profession {
+    // Общее с DESKTOP!!!
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: getColor('secondary-text');
+
+    margin-bottom: 16px;
+    // !!!
+  }
+
+  // На DESKTOP!!!
+  // &__list {
+  //   display: flex;
+  // }
+
+  // &__item {
+  //   width: 270px;
+  // }
+  // !!!
+}

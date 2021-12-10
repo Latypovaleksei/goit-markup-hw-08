@@ -1,0 +1,62 @@
+@import '../utils/variables';
+@import '../utils/transition';
+
+.filters {
+  // DESKTOP+MOBILE!!!
+  display: flex;
+  margin-bottom: 50px;
+  // !!!
+
+  // DESKTOP!!!
+  // justify-content: center;
+  // !!!
+
+  // MOBILE!!!
+  flex-wrap: wrap;
+  justify-content: start;
+  // !!!
+
+  &__item:first-child {
+    // MOBILE!!!
+    margin-bottom: 15px;
+    // !!!
+  }
+
+  &__item:not(:last-child) {
+    // DESKTOP+MOBILE!!!
+    margin-right: 8px;
+    // !!!!
+  }
+
+  &__button {
+    // DESKTOP+MOBILE!!!
+    background-color: getColor('third-background');
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border-style: unset;
+    border-radius: 4px;
+    color: getColor('main-text');
+
+    padding: 6px 22px;
+
+    @include transition(background-color + color + box-shadow);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: getColor('highlighting');
+      color: getColor('main');
+      box-shadow: getShadow('bt-filter');
+    }
+
+    &--active {
+      background-color: getColor('highlighting');
+      color: getColor('main');
+      box-shadow: getShadow('bt-filter');
+    }
+    // !!!!
+  }
+}

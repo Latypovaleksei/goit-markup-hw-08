@@ -1,0 +1,44 @@
+@import '../utils/variables';
+@import '../utils/transition';
+
+.address {
+  // DESKTOP+MOBILE!!!
+  font-style: normal;
+  // !!!
+
+  &__item:not(:last-child) {
+    // DESKTOP!!!
+    // margin-bottom: 9px;
+    // !!!
+
+    // MOBILE!!!
+    margin-bottom: 8px;
+    // !!!
+  }
+
+  &__link {
+    // MOBILE!!!
+    display: block;
+    text-align: center;
+    // !!!
+
+    // DESKTOP+MOBILE!!!
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: getColor('third-text');
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      color: getColor('highlighting');
+    }
+
+    &--location {
+      color: getColor('main');
+    }
+    // !!!
+  }
+}

@@ -1,0 +1,24 @@
+@import '../utils/variables';
+
+.page-footer {
+  // DESKTOP+MOBILE+TABLET!!!
+  background-color: getColor('secondary-bg');
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // !!!
+}
+
+.logo-adds-box {
+  // DESKTOP+MOBILE!!!
+  display: flex;
+  flex-direction: column;
+  // !!!
+
+  // MOBILE!!!
+  align-items: center;
+  // !!!
+
+  // DESKTOP!!!
+  // margin-right: 70px;
+  // !!!
+}

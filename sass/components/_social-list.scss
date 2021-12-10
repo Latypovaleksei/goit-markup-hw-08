@@ -22,19 +22,19 @@
 
     &:hover,
     &:focus {
-      background-color: map-get($colors, 'highlighting');
+      background-color: getColor('highlighting');
     }
 
     &--join-box {
-      background-color: map-get($colors, 'footer-social-link-bg');
+      background-color: getColor('footer-social-link-bg');
 
       &:hover,
       &:focus {
-        background-color: map-get($colors, 'highlighting');
+        background-color: getColor('highlighting');
 
         & .icon,
         & .icon {
-          fill: map-get($colors, 'main');
+          fill: getColor('main');
         }
       }
     }
@@ -43,18 +43,18 @@
   &__icon {
     width: 20px;
     height: 20px;
-    fill: map-get($colors, 'icon');
+    fill: getColor('icon');
 
     @include transition(fill);
 
     &--join-box {
-      fill: map-get($colors, 'main');
+      fill: getColor('main');
       @include transition(fill);
     }
 
     .social-list__link:hover &,
     .social-list__link:focus & {
-      fill: map-get($colors, 'main');
+      fill: getColor('main');
     }
   }
 }

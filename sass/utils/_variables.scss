@@ -30,6 +30,7 @@ $border: (
   'mobileMenu': 1px solid rgba(33, 33, 33, 0.2),
   'modal': 1px solid rgba(33, 33, 33, 0.2),
   'checkbox': 1px solid rgba(33, 33, 33, 1),
+  'footer-input': 1px solid rgba(255, 255, 255, 0.3),
 );
 
 @function getBorder($key) {
@@ -51,10 +52,20 @@ $shadow: (
 
 $gap: (
   'works-item': 30px,
+  'partners-item': 30px,
 );
 
 @function getGap($key) {
   @return map-get($gap, $key);
+}
+
+$column: (
+  'partners-mobile': 2,
+  'works-desktop': 3,
+);
+
+@function getColumn($key) {
+  @return map-get($column, $key);
 }
 
 $fonts: (

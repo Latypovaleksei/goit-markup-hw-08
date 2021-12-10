@@ -1,0 +1,76 @@
+@import '../utils/variables';
+@import '../utils/transition';
+
+.partners {
+  &__list {
+    // Общее с DESKTOP!!!
+    display: flex;
+    // !!!
+
+    // Только MOBILE!!!
+    flex-wrap: wrap;
+    margin-right: calc(-1 * #{getGap('partners-item')});
+    margin-bottom: calc(-1 * #{getGap('partners-item')});
+    //!!!
+  }
+
+  // Только MOBILE!!!
+  &__item {
+    flex-basis: calc(
+      100% / #{getColumn('partners-mobile')} - #{getGap('partners-item')}
+    );
+    margin-right: getGap('partners-item');
+    margin-bottom: getGap('partners-item');
+  }
+  // !!!
+
+  // Только на DESKTOP!!!
+  // &__item:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+  // !!!
+
+  &__link {
+    // MOBILE+DESKTOP!!!
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid getColor('icon');
+    border-radius: 4px;
+    height: 92px;
+    // !!!
+
+    // Только на DESKTOP!!!
+    // width: 170px;
+    // !!!
+
+    // Только на MOBILE!!!
+    width: 210px;
+    // !!!
+
+    // DESKTOP+MOBILE!!!
+    @include transition(border);
+
+    &:hover,
+    &:focus {
+      border: 1px solid getColor('highlighting');
+    }
+    // !!!
+  }
+
+  &__icon {
+    // DESKTOP+MOBILE!!!
+    width: 106px;
+    height: 60px;
+    fill: getColor('icon');
+
+    @include transition(fill);
+
+    .partners__link:hover &,
+    .partners__link:focus & {
+      fill: getColor('highlighting');
+    }
+    // !!!
+  }
+}
