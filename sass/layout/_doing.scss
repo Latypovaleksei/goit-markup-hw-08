@@ -1,42 +1,44 @@
 @import '../utils/variables';
 
 .doing {
-  display: none;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 
-  // // на DESKTOP!!!
-  // &__list {
-  //   display: flex;
-  // }
+  // на DESKTOP!!!
+  &__list {
+    display: flex;
+  }
 
-  // &__item {
-  //   position: relative;
+  &__item {
+    position: relative;
 
-  //   &:not(:last-child) {
-  //     margin-right: 30px;
-  //   }
-  // }
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 
-  // &__label {
-  //   position: absolute;
-  //   left: 0;
-  //   bottom: 0;
-  //   width: 100%;
-  //   height: 70px;
+  &__label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
 
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  //   background-color: map-get($colors, 'bg-label');
-  // }
+    background-color: map-get($colors, 'bg-label');
+  }
 
-  // &__text {
-  //   font-size: 14px;
-  //   font-weight: 700;
-  //   line-height: 1.14;
-  //   letter-spacing: 0.03em;
-  //   text-align: center;
-  //   text-transform: uppercase;
-  //   color: map-get($colors, 'main');
-  // }
+  &__text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: map-get($colors, 'main');
+  }
 }

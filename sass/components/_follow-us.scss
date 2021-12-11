@@ -2,7 +2,9 @@
 
 .follow-us-box {
   // DESKTOP!!!
-  // margin-left: auto;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
   // !!!
 
   // MOBILE!!!
@@ -11,40 +13,46 @@
   // !!!
 
   &__text {
-    // DESKTOP+MOBILE!!!
+    // MOBILE!!!
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     color: getColor('main');
     text-transform: uppercase;
 
     margin-bottom: 20px;
     // !!!
+
+    // DESKTOP!!
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 
   &__form {
-    // DESKTOP+MOBILE!!!
+    // MOBILE+TABLET+DESKTOP!!!
     display: flex;
     align-items: center;
     // !!!
 
-    // MOBILE!!!
-    flex-direction: column;
+    // MOBILE+TABLET!!!
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+    }
     // !!
   }
 
   &__input {
-    // DESKTOP+MOBILE!!!
+    // MOBILE+TABLET+DESKTOP!!!
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: getColor('third-text');
 
-    padding-left: 16px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 16px;
 
     background-color: getColor('bg-input');
     border: getBorder('footer-input');
@@ -53,18 +61,29 @@
     // !!!
 
     // DESKTOP!!!
-    // width: 358px;
-
-    // margin-right: 12px;
+    @media screen and (min-width: 1200px) {
+      max-width: 358px;
+      margin-right: 12px;
+    }
     // !!!!
 
     // MOBILE!!!
     width: 100%;
-    margin-bottom: 20px;
+    // !!
+
+    // MOBILE+TABLET!!
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
     // !!!
 
+    // TABLET!!!
+    @media screen and (min-width: 768px) {
+      width: 450px;
+    }
+
     &::placeholder {
-      // DESKTOP+MOBILE!!!
+      // MOBILE+TABLET+DESKTOP!!!
       font-size: 16px;
       font-weight: 400;
       line-height: 1.25;
@@ -75,7 +94,7 @@
   }
 
   &__bt {
-    // DESKTOP+MOBILE!!!
+    // MOBILE+TABLET+DESKTOP!!!
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,7 +106,7 @@
   }
 
   &__icon {
-    // DESKTOP+MOBILE!!!
+    // MOBILE+TABLET+DESKTOP!!!
     fill: getColor('main');
     width: 24px;
     height: 24px;

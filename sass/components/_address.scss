@@ -7,22 +7,27 @@
   // !!!
 
   &__item:not(:last-child) {
-    // DESKTOP!!!
-    // margin-bottom: 9px;
-    // !!!
-
     // MOBILE!!!
     margin-bottom: 8px;
+    // !!!
+
+    // DESKTOP!!!
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
     // !!!
   }
 
   &__link {
-    // MOBILE!!!
+    // MOBILE+TABLET!!!
     display: block;
-    text-align: center;
+
+    @media screen and (max-width: 1199px) {
+      text-align: center;
+    }
     // !!!
 
-    // DESKTOP+MOBILE!!!
+    // MOBILE+TABLET+DESKTOP!!!
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;

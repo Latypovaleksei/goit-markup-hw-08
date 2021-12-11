@@ -7,7 +7,7 @@
 
   &__list {
     // TABLET!!!
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       max-width: 768px;
       display: flex;
       flex-direction: row;
@@ -17,6 +17,12 @@
       margin-bottom: calc(-1 * #{getGap('team-tablet')});
     }
     // !!!
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -34,12 +40,14 @@
       &:not(:last-child) {
         margin-bottom: 30px;
       }
-    }
+      // !!
 
+      // DESKTOP!!!
+    }
     // !!!
 
     // TABLET!!!
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       max-width: 354px;
       flex-basis: calc(
         100% / #{getColumn('team-tablet')} - #{getGap('team-tablet')}
@@ -48,24 +56,30 @@
       margin-bottom: getGap('team-tablet');
     }
 
-    // Только на DESKTOP!!!
-    // &:not(:last-child) {
-    //   margin-right: 30px;
-    // }
+    // DESKTOP!!!
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      flex-wrap: nowrap;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+    }
     // !!!
   }
 
   &__box {
-    //MOBILE+DESKTOP!!!
+    //MOBILE+TABLET+DESKTOP!!!
     padding-top: 30px;
     // !!!
 
-    // Только на MOBILE!!!
+    //MOBILE!!!
     padding-bottom: 24px;
-    // !!!
 
-    // Только на DESKTOP!!!
-    //   padding-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 30px;
+    }
     // !!!
   }
 
@@ -81,7 +95,7 @@
   }
 
   &__profession {
-    // Общее с DESKTOP!!!
+    // MOBILE+TABLET+DESKTOP!!!
     font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
@@ -91,14 +105,4 @@
     margin-bottom: 16px;
     // !!!
   }
-
-  // На DESKTOP!!!
-  // &__list {
-  //   display: flex;
-  // }
-
-  // &__item {
-  //   width: 270px;
-  // }
-  // !!!
 }

@@ -20,7 +20,18 @@
 
     &__item:not(:last-child) {
       margin-bottom: 10px;
+
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+        margin-right: 50px;
+      }
     }
+  }
+
+  // DESKTOP!!!
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
   }
 
   &__icon {
@@ -28,7 +39,7 @@
     display: none;
     //
 
-    // TABLET!!
+    // TABLET+DESKTOP!!
     @media screen and (min-width: 768px) {
       display: block;
       fill: getColor('secondary-text');
@@ -58,26 +69,7 @@
     // MOBILE+TABLET+DESKTOP!!!
     color: getColor('secondary-text');
     font-weight: 500;
-    // !!!
-
-    // MOBILE!!!
-    font-size: 24px;
-    line-height: 1.17;
     letter-spacing: 0.02em;
-
-    &--tel {
-      color: getColor('highlighting');
-      line-height: 1.18;
-    }
-    // !!!
-
-    // TABLET!!!
-    @media screen and (min-width: 768px) {
-      font-size: 12px;
-      line-height: 1.16;
-      color: getColor('secondary-text');
-      padding: 0;
-    }
 
     @include transition(colors);
 
@@ -88,51 +80,33 @@
       color: getColor('highlighting');
       fill: getColor('highlighting');
     }
+    // !!!
+
+    // MOBILE!!!
+    font-size: 24px;
+    line-height: 1.17;
+
+    &--tel {
+      @media screen and (max-width: 767px) {
+        color: getColor('highlighting');
+        line-height: 1.18;
+      }
+    }
+    // !!!
+
+    // TABLET!!!
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+      line-height: 1.16;
+      padding: 0;
+    }
+    // !!!
+
+    // DESKTOP!!!
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
+    // !!!
   }
-
-  //desktop!!!
-  //.contact-list {
-  // flex-direction: row;
-  // align-items: center;
-  // margin-left: auto;
-
-  // &__item:not(:last-child) {
-  //   margin-right: 50px;
-  // }
-
-  // &__link {
-  //   font-weight: 500;
-  //   font-size: 14px;
-  //   line-height: 1.14;
-  //   letter-spacing: 0.02em;
-
-  //   @include transition(colors);
-
-  //   &:hover,
-  //   &:focus,
-  //   &:hover .contact-list__icon,
-  //   &:focus .contact-list__icon {
-  //     color: map-get($colors, 'highlighting');
-  //     fill: map-get($colors, 'highlighting');
-  //   }
-  // }
-
-  // &__icon {
-  //   fill: map-get($colors, 'secondary-text');
-
-  //   &--envelope {
-  //     width: 16px;
-  //     height: 12px;
-  //   }
-
-  //   &--smartphone {
-  //     width: 10px;
-  //     height: 16px;
-  //   }
-
-  //   &--smartphone,
-  //   &--envelope {
-  //     margin-right: 10px;
-  //   }
-  // }
 }

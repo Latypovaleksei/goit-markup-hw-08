@@ -4,13 +4,17 @@
   padding-bottom: 60px;
   // !!!
 
-  // это на DESKTOP
-  // padding-top: 94px;
-  // padding-bottom: 94px;
+  // DESKTOP
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
-  // &__features {
-  //   padding-bottom: 0;
-  // }
+  &__features {
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 0;
+    }
+  }
 
   &__title {
     // MOBILE+TABLET+DESKTOP!!!
@@ -26,16 +30,18 @@
     margin-bottom: 30px;
     // !!!
 
-    // Только TABLET!!!
+    // TABLET!!!
     @media screen and (min-width: 768px) {
       line-height: 1.17;
     }
     // !!
 
-    // Только на DESKTOP!!!
-    // font-size: 36px;
-    // line-height: 1.16;
-    // margin-bottom: 50px;
+    // DESKTOP!!!
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: 1.16;
+      margin-bottom: 50px;
+    }
     // !!!
   }
 }

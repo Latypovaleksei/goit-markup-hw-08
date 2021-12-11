@@ -1,24 +1,24 @@
 @import '../utils/variables';
 
 .page-footer {
-  // DESKTOP+MOBILE+TABLET!!!
+  // MOBILE+TABLET+DESKTOP!!!
   background-color: getColor('secondary-bg');
   padding-top: 60px;
   padding-bottom: 60px;
   // !!!
 }
 
-.logo-adds-box {
-  // DESKTOP+MOBILE!!!
-  display: flex;
-  flex-direction: column;
-  // !!!
+.logo-adds-join {
+  // TABLET!!!
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
 
-  // MOBILE!!!
-  align-items: center;
-  // !!!
-
-  // DESKTOP!!!
-  // margin-right: 70px;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
+  }
   // !!!
 }

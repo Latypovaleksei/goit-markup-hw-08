@@ -2,7 +2,7 @@
 
 .features {
   &__list {
-    // MOBILE+TABLET!!!
+    // MOBILE+TABLET+DESKTOP!!!
     display: flex;
     // !!!
 
@@ -14,15 +14,21 @@
     // !!!
 
     // TABLET!!!
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       flex-direction: row;
       flex-wrap: wrap;
 
       margin-right: calc(-1 * #{getGap('feature-tablet')});
       margin-bottom: calc(-1 * #{getGap('feature-tablet')});
     }
+    // !!!
+
+    // DESKTOP!!!
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+    }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     &__item {
       width: 354px;
       flex-basis: calc(
@@ -33,8 +39,21 @@
     }
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    &__item {
+      width: 270px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   &__box {
@@ -82,18 +101,8 @@
   }
 
   // ЭТО все на DESKTOP
-  // &__list {
-  //   display: flex;
-  // }
 
-  // &__item {
-  //   display: block;
-  //   width: 270px;
-
-  //   &:not(:last-child) {
-  //     margin-right: 30px;
-  //   }
-  // }
+  //
 
   // &__icon {
   //   width: 70px;

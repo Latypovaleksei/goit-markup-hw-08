@@ -2,31 +2,47 @@
 @import '../utils/transition';
 
 .works {
-  // DESKTOP+MOBILE!!!
+  // MOBILE+TABLET+DESKTOP!!!
   display: flex;
   // !!!
 
-  // DESKTOP!!!
-  // flex-wrap: wrap;
-
-  // margin-right: calc(-1 * #{getGap('works-item')});
-  // margin-bottom: calc(-1 * #{getGap('works-item')});
-  // !!!!
-
   // MOBILE
   flex-direction: column;
+  // !!!
+
+  // TABLET+DESKTOP!!!
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-right: calc(-1 * #{getGap('works-item')});
+    margin-bottom: calc(-1 * #{getGap('works-item')});
+  }
 
   &__item {
+    // MOBILE!!!
     width: 100%;
+    // !!!
 
-    // // DESKTOP!!!
-    // width: 370px;
-    // flex-basis: calc(
-    //   100% / #{getColumn('works-desktop')} - #{getGap('works-item')}
-    // );
-    // margin-right: getGap('works-item');
-    // margin-bottom: getGap('works-item');
-    // !!!!
+    // TABLE!!!
+    @media screen and (min-width: 768px) {
+      width: 354px;
+
+      flex-basis: calc(
+        100% / #{getColumn('works-tablet')} - #{getGap('works-item')}
+      );
+      margin-right: getGap('works-item');
+      margin-bottom: getGap('works-item');
+    }
+
+    // DESKTOP!!!
+    @media screen and (min-width: 1200px) {
+      width: 370px;
+      flex-basis: calc(
+        100% / #{getColumn('works-desktop')} - #{getGap('works-item')}
+      );
+    }
+    // !!!
 
     // MOBILE!!!
     &:not(:last-child) {
@@ -70,13 +86,15 @@
     color: getColor('main');
     // !!!
 
-    // DESKTOP!!
-    // padding: 63px 24px;
-    // !!!!
-
     // MOBILE!!!
     padding: 77px 24px;
     // !!!
+
+    // DESKTOP!!
+    @media screen and (min-width: 1200px) {
+      padding: 63px 24px;
+    }
+    // !!!!
 
     @include transition(transform);
 
@@ -90,14 +108,15 @@
   }
 
   &__specification {
-    // DESKTOP+MOBILE!!!
+    // DESKTOP+MOBILE+TABLET!!!
     padding: 20px 24px;
     border: getBorder('works');
+    min-height: 146px;
     // !!!
   }
 
   &__name-product {
-    // DESKTOP+MOBILE!!!
+    // DESKTOP+MOBILE+TABLET!!!
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -109,7 +128,7 @@
   }
 
   &__type-product {
-    // DESKTOP+MOBILE!!!
+    // DESKTOP+MOBILE+TABLET!!!
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;

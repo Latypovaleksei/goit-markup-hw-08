@@ -3,35 +3,54 @@
 
 .partners {
   &__list {
-    // Общее с DESKTOP!!!
+    // MOBILE+TABLET+DESKTOP!!!
     display: flex;
     // !!!
 
-    // Только MOBILE!!!
-    flex-wrap: wrap;
-    margin-right: calc(-1 * #{getGap('partners-item')});
-    margin-bottom: calc(-1 * #{getGap('partners-item')});
+    // MOBILE+TABLET!!!
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+      margin-right: calc(-1 * #{getGap('partners-item')});
+      margin-bottom: calc(-1 * #{getGap('partners-item')});
+    }
+
     //!!!
   }
 
-  // Только MOBILE!!!
   &__item {
-    flex-basis: calc(
-      100% / #{getColumn('partners-mobile')} - #{getGap('partners-item')}
-    );
-    margin-right: getGap('partners-item');
-    margin-bottom: getGap('partners-item');
-  }
-  // !!!
+    // MOBILE!!!
+    @media screen and (max-width: 767px) {
+      flex-basis: calc(
+        100% / #{getColumn('partners-mobile')} - #{getGap('partners-item')}
+      );
+    }
+    // !!!
 
-  // Только на DESKTOP!!!
-  // &__item:not(:last-child) {
-  //   margin-right: 30px;
-  // }
-  // !!!
+    // TABLET!!!
+    @media screen and (max-width: 1199px) {
+      flex-basis: calc(
+        100% / #{getColumn('partners-tablet')} - #{getGap('partners-item')}
+      );
+    }
+
+    // MOBILE+TABLET!!!
+    @media screen and (max-width: 1199px) {
+      margin-right: getGap('partners-item');
+      margin-bottom: getGap('partners-item');
+    }
+    // !!!
+
+    // DESKTOP!!!
+    @media screen and (min-width: 1200px) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+    // !!!
+  }
 
   &__link {
-    // MOBILE+DESKTOP!!!
+    // MOBILE+TABLET+DESKTOP!!!
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,15 +60,23 @@
     height: 92px;
     // !!!
 
-    // Только на DESKTOP!!!
-    // width: 170px;
-    // !!!
-
-    // Только на MOBILE!!!
+    // MOBILE!!!
     width: 210px;
     // !!!
 
-    // DESKTOP+MOBILE!!!
+    // TABLET!!!
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+    // !!
+
+    // DESKTOP!!!
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
+    // !!!
+
+    // MOBILE+TABLET+DESKTOP!!!
     @include transition(border);
 
     &:hover,
@@ -60,7 +87,7 @@
   }
 
   &__icon {
-    // DESKTOP+MOBILE!!!
+    // MOBILE+TABLET+DESKTOP!!!
     width: 106px;
     height: 60px;
     fill: getColor('icon');

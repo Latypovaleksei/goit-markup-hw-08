@@ -2,11 +2,13 @@
 
 .join-box {
   // MOBILE!!!
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
   // !!!
 
   &__text {
-    // DESKTOP+MOBILE!!!
+    // MOBILE+TABLET+DESKTOP!!!
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -22,8 +24,11 @@
     // !!!
 
     // DESKTOP!!!
-    // font-size: 16px;
-    // line-height: 1;
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      font-size: 16px;
+      line-height: 1;
+    }
     // !!!
   }
 }

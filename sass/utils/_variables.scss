@@ -63,9 +63,11 @@ $gap: (
 
 $column: (
   'partners-mobile': 2,
+  'partners-tablet': 3,
   'feature-tablet': 2,
   'team-tablet': 2,
   'works-desktop': 3,
+  'works-tablet': 2,
 );
 
 @function getColumn($key) {
