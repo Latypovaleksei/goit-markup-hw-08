@@ -1,17 +1,24 @@
 @import '../utils/variables';
 
 .logo {
-  // DESKTOP+MOBILE!!!
+  // MOBILE+TABLET+DESKTOP!!!
   font-family: getFonts('secondary');
   font-weight: 700;
   letter-spacing: 0.03em;
   color: getColor('main-text');
   // !!!!
 
-  // MOBILE!!!
+  // MOBILE+TABLET!!!
   font-size: 24px;
   line-height: 1.16;
   // !!!
+
+  // TABLET!!!
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 
   // !!!Desktop!!!
   //  font-size: 26px;
@@ -22,16 +29,19 @@
   // !!!
 
   &__web {
+    // MOBILE+TABLET+DESKTOP!!!
     color: getColor('highlighting');
+    //  !!!
   }
 
   &--footer {
-    // DESKTOP+MOBILE!!!
+    // MOBILE+TABLET+DESKTOP!!!
     color: getColor('main');
     // !!!
 
-    // MOBILE!!!
+    // MOBILE+TABLET!!!
     margin-bottom: 20px;
+    margin-right: 0;
     // !!!
 
     // DESKTOP!!!

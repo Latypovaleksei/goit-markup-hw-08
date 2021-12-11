@@ -1,33 +1,62 @@
 @import '../utils/variables';
 
 .team {
+  // MOBILE+TABLET+DESKTOP!!!
   background-color: getColor('third-background');
+  // !!!
+
+  &__list {
+    // TABLET!!!
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      margin-right: calc(-1 * #{getGap('team-tablet')});
+      margin-bottom: calc(-1 * #{getGap('team-tablet')});
+    }
+    // !!!
+  }
 
   &__item {
-    // Общее с DESKTOP!!!
+    //MOBILE+TABLET+DESKTOP!!!
     text-align: center;
     background-color: getColor('main');
     box-shadow: getShadow('fotocard');
     border-radius: 0px 0px 4px 4px;
     // !!!
 
+    // MOBILE!!!
+    @media screen and (max-width: 767px) {
+      max-width: 450px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    // !!!
+
+    // TABLET!!!
+    @media screen and (min-width: 768px) {
+      max-width: 354px;
+      flex-basis: calc(
+        100% / #{getColumn('team-tablet')} - #{getGap('team-tablet')}
+      );
+      margin-right: getGap('team-tablet');
+      margin-bottom: getGap('team-tablet');
+    }
+
     // Только на DESKTOP!!!
     // &:not(:last-child) {
     //   margin-right: 30px;
     // }
     // !!!
-
-    // Только на MOBILE!!!
-    width: 450px;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-    // !!!
   }
 
   &__box {
-    // Общее с DESKTOP!!!
+    //MOBILE+DESKTOP!!!
     padding-top: 30px;
     // !!!
 
@@ -41,7 +70,7 @@
   }
 
   &__names {
-    // Общее с DESKTOP!!!
+    // MOBILE+TABLET+DESKTOP!!!
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;

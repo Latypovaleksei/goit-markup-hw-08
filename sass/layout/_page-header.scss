@@ -2,8 +2,10 @@
 @import '../utils/transition';
 
 .page-header {
-  border-bottom: map-get($border, 'header');
+  // MOBILE+TABLET+DESKTOP!!!
+  border-bottom: getBorder('header');
   position: relative;
+  // !!!
 
   &__link {
     display: flex;
@@ -13,6 +15,7 @@
   }
 
   &__mobile-menu {
+    // MOBILE!!!
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -24,9 +27,17 @@
     background-color: getColor('main');
     padding: 48px 40px;
 
-    transform: translateX(-100%);
+    transform: translateX(-400%);
 
     @include transitionMobileMenu;
+    // !!!
+
+    @media screen and (min-width: 768px) {
+      position: relative;
+      transform: translateX(0);
+      flex-direction: row;
+      padding: 0;
+    }
   }
 
   &__mobile-menu.is-open {
@@ -34,9 +45,14 @@
   }
 
   &__bt {
+    // MOBILE!!!
     background-color: getColor('main');
     border: none;
+    // !!!
 
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
     &--close {
       @extend .page-header__bt;
       position: absolute;

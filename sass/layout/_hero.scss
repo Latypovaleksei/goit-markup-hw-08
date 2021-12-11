@@ -1,27 +1,72 @@
 @import '../utils/variables';
 
 .hero-section {
+  // MOBILE+TABLET!!!
   display: block;
+  height: 400px;
+
   padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
+
   margin-left: auto;
   margin-right: auto;
 
-  width: 480px;
-  height: 400px;
   background-color: getColor('secondary');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // !!!
+
+  // MOBILE!!!
+  max-width: 480px;
+
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url('../images/mobile/hero_img@1x.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/mobile/hero_img@2x.jpg');
+  }
+  // !!!!
+
+  // TABLET!!!
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/tablet/hero_img@1xT.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/tablet/hero_img@2xT.jpg');
+    }
+  }
+  // !!!
 
   &__title {
+    // MOBILE+TABLET!!!
     color: getColor('main');
     font-weight: 900;
     font-size: 26px;
@@ -36,19 +81,5 @@
   &__bt {
     width: 200px;
     height: 50px;
-  }
-}
-
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero-section {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url('../images/mobile/hero_img@2x.jpg');
   }
 }

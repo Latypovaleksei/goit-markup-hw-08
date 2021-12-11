@@ -53,6 +53,8 @@ $shadow: (
 $gap: (
   'works-item': 30px,
   'partners-item': 30px,
+  'feature-tablet': 30px,
+  'team-tablet': 30px,
 );
 
 @function getGap($key) {
@@ -61,6 +63,8 @@ $gap: (
 
 $column: (
   'partners-mobile': 2,
+  'feature-tablet': 2,
+  'team-tablet': 2,
   'works-desktop': 3,
 );
 

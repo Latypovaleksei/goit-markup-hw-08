@@ -1,5 +1,5 @@
 .section {
-  // Только на MOBILE!!!
+  //MOBILE+TABLET!!!
   padding-top: 60px;
   padding-bottom: 60px;
   // !!!
@@ -13,18 +13,24 @@
   // }
 
   &__title {
-    // Общее с DESKTOP!!!
+    // MOBILE+TABLET+DESKTOP!!!
     font-weight: 700;
     letter-spacing: 0.03em;
     text-align: center;
     color: getColor('main-text');
     // !!!
 
-    // Только на MOBILE!!!
+    //MOBILE+TABLET!!!
     font-size: 28px;
     line-height: 1.14;
     margin-bottom: 30px;
     // !!!
+
+    // Только TABLET!!!
+    @media screen and (min-width: 768px) {
+      line-height: 1.17;
+    }
+    // !!
 
     // Только на DESKTOP!!!
     // font-size: 36px;

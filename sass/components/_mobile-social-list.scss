@@ -1,6 +1,7 @@
 @import '../utils/variables';
 
 .mobile-menu-sl {
+  // MOBILE!!!
   display: flex;
 
   &__item {
@@ -25,4 +26,11 @@
     letter-spacing: 0.02em;
     color: getColor('highlighting');
   }
+  // !!!!
+
+  // TABLET+DESKTOP!!!
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  //
 }
