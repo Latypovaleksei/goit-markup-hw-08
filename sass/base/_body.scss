@@ -4,4 +4,5 @@ body {
   background-color: getColor('main');
   font-family: getFonts('basic');
   font-style: normal;
+  overflow-x: hidden;
 }
