@@ -1784,6 +1784,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .works__overlay {
+    padding: 49px 24px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .works__overlay {
     padding: 63px 24px;
