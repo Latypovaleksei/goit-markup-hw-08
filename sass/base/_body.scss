@@ -1,8 +1,10 @@
 @import '../utils/variables';
 
+html,
 body {
   background-color: getColor('main');
   font-family: getFonts('basic');
   font-style: normal;
+  max-width: 100%;
   overflow-x: hidden;
 }
