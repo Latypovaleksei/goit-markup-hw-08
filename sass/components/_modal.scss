@@ -8,6 +8,7 @@
   width: 100%;
   height: 100%;
   background-color: getColor('backdrop');
+  overflow-y: scroll;
 
   @include transitionModal;
 }
@@ -25,9 +26,10 @@
   transform: translate(-50%, -50%);
   min-width: 450px;
   min-height: 609px;
+
   @media screen and (max-width: 479px) {
+    top: 65%;
     min-width: 94%;
-    min-height: unset;
   }
 
   @media screen and (min-width: 1200px) {

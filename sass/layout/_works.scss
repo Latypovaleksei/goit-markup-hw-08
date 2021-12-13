@@ -51,7 +51,8 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     @include transition(box-shadow);
 
@@ -120,6 +121,7 @@
     padding: 20px 24px;
     border: getBorder('works');
     border-top: none;
+    flex-grow: 1;
     // !!
 
     // TABLET!!!
